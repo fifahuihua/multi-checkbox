@@ -1,3 +1,77 @@
 .default-checkbox {
-	
+
+}
+
+select {
+	border: 1px solid #cccccc;
+	height: 30px;
+	display: inline-block;
+	padding: 4px 6px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	vertical-align: middle;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: Arial;
+}
+
+table tr th {
+	background-color: #CCCCFF;
+	height:40px;	
+	font-family: Arial;
+	padding:5px;
+	border:1px solid #6699CC;
+}
+
+table tr td {
+	background-color: #fff;
+	height:50px;	
+	font-family: Arial;
+	vertical-align: middle;
+	text-align: left;
+	padding:5px;
+	border:1px solid #6699CC;
+}
+
+table {
+	border: 1px #6699CC solid;
+	text-align: center;
+	font-size: 14px;
+	padding:0px;
+	border-collapse:collapse;
+}
+
+.multiple-select-input {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-family: Arial;
+	font-size: 14px;
+	height: 30px;
+	border: 1px solid #cccccc;
+	display: block;
+}
+
+.info-tips:before{
+	content: "\e086";
+}
+
+.info-tips {
+  position: absolute;
+  top: 0;
+  /* right: 0; */
+  z-index: 2;
+  display: block;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  pointer-events: none;
+  color: #3c763d;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  font-style: normal;
+  font-family: 'Glyphicons Halflings';
 }
