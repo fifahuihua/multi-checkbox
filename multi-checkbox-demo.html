@@ -8,14 +8,29 @@
   <script type="text/javascript" src="scripts/jquery-2.1.3.min.js"></script>
   <script type="text/javascript">
   $(function(){
-	$("#countryMultiSelect > i")
+	$("#countryMultiSelect > i.glyphicon-info-sign")
 		.mouseover(function() {
-			$(this).parent().find(".multiple-select-tips").show(1000);
+			$(this).parent().find(".multiple-select-tips").show();
 		})
 		.mouseout(function() {
-			$(this).parent().find(".multiple-select-tips").hide(1000);
+			$(this).parent().find(".multiple-select-tips").hide();
 		});
-	  });
+
+	$("#monthMultiSelect > i.glyphicon-info-sign")
+		.mouseover(function() {
+			$(this).parent().find(".multiple-select-tips").show();
+		})
+		.mouseout(function() {
+			$(this).parent().find(".multiple-select-tips").hide();
+		});
+	$("#countryMultiSelect > .multiple-select-input").bind("click", function() {
+		$(this).parent().find("ul.multiple-select-options").toggle();
+	});
+
+	$("#monthMultiSelect > .multiple-select-input").bind("click", function() {
+		$(this).parent().find("ul.multiple-select-options").toggle();
+	});
+  });
   </script>
 </head>
 <body>
@@ -44,7 +59,39 @@
 			</select>
 		</td>
 		<td>
-			<div id="monthMultiSelect" style="position:relative"/>
+			<div id="monthMultiSelect" style="position:relative;display:inline-block">
+				<i class="info-tips glyphicon-info-sign"></i>
+				<button class="multiple-select-input">
+					Please select
+					<i class="pulldown-arrow"></i>
+				</button>
+				<ul class="multiple-select-options">
+					<li><label><input type="checkbox" value="1">January</label></li>
+					<li><label><input type="checkbox" value="2">February</label></li>
+					<li><label><input type="checkbox" value="3">March</label></li>
+					<li><label><input type="checkbox" value="4">April</label></li>
+					<li><label><input type="checkbox" value="5">May</label></li>
+					<li><label><input type="checkbox" value="6">June</label></li>
+					<li><label><input type="checkbox" value="7">July</label></li>
+					<li><label><input type="checkbox" value="8">August</label></li>
+					<li><label><input type="checkbox" value="9">September</label></li>
+					<li><label><input type="checkbox" value="10">October</label></li>
+					<li><label><input type="checkbox" value="11">November</label></li>
+					<li><label><input type="checkbox" value="12">December</label></li>
+				</ul>
+				<div class="multiple-select-tips" style="display:none">
+					<div class="tips-content">
+						<div>Selected options: </div>
+						<ul>
+							<li>January</li>
+							<li>August</li>
+							<li>November</li>
+						</ul>
+					</div>
+					<div class="tips-arrow-border"></div>
+					<div class="tips-arrow"></div>
+				</div>
+			</div>
 		</td>
 	</tr>
 	<tr>
@@ -83,11 +130,21 @@
 			</select>
 		</td>
 		<td>
-			<div id="countryMultiSelect" style="position:relative">
+			<div id="countryMultiSelect" style="position:relative;display:inline-block">
 				<i class="info-tips glyphicon-info-sign"></i>
-				<input class="multiple-select-input" size="30" value="" type="text"/>
+				<button class="multiple-select-input">
+					Please select
+					<i class="pulldown-arrow"></i>
+				</button>
 				<div class="multiple-select-tips" style="display:none">
-					<div class="tips-content">Selected options: XXXX, XXXX, XXXX</div>
+					<div class="tips-content">
+						<div>Selected options: </div>
+						<ul>
+							<li>Option1</li>
+							<li>Option2</li>
+							<li>Option3</li>
+						</ul>
+					</div>
 					<div class="tips-arrow-border"></div>
 					<div class="tips-arrow"></div>
 				</div>

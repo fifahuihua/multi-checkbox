@@ -43,34 +43,57 @@ table {
 }
 
 .multiple-select-input {
-	border-radius: 5px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
+	border-radius: 0px 5px 5px 0px;
+	-moz-border-radius: 0px 5px 5px 0px;
+	-webkit-border-radius: 0px 5px 5px 0px;
 	font-family: Arial;
 	font-size: 14px;
 	height: 30px;
 	border: 1px solid #cccccc;
-	display: block;
-    padding-left: 35px;
-	padding-right: 10px;
 	background-color: #E0FFFF;
+	cursor: pointer;
+	padding: 6px 12px;
+	display: inline-block;
+	margin-left: -5px;
+}
+
+.multiple-select-options {
+	list-style-type: none;
+	padding: 0px;
+	margin: 1px 0px 0px 0px;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	box-shadow: 0 6px 12px rgba(0,0,0,.175);
+	display: none;
+	position: absolute;
+	z-index: 2;
+	background-color: #FFFFFF;
+	left: 28px;
+	min-width: 130px;
 }
 	
+.multiple-select-options > li:hover {
+	background-color: #E0F0FF;
+}
+
+.multiple-select-options > li {
+	padding: 3px 15px 3px 3px;
+}
+
 .info-tips {
 	border-radius: 5px 0px 0px 5px;
 	background-color: #CEF3F8;
-	position: absolute;
-	top: 1px;
-	left: 1px;
-	display: block;
 	width: 30px;
-	height: 28px;
-	line-height: 28px;
+	height: 30px;
 	text-align: center;
 	color: #3c763d;
 	font-style: normal;
 	font-family: 'Glyphicons Halflings';
 	cursor: pointer;
+	border: 1px solid #cccccc;
+	padding: 6px 0px;
+	line-height: 90%;
 }
 
 .tips-content {
@@ -85,6 +108,7 @@ table {
 	position: absolute;
 	left: 1px;
 	top: 40px;
+	z-index: 2;
 }
 
 .tips-arrow-border {
@@ -113,6 +137,22 @@ table {
 	left: 10px;
 	top: 26px;
 	border-width: 8px !important;
+	z-index: 3;
+}
+
+.pulldown-arrow {
+	border: 4px solid #0f0000; 
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	display: inline-block;
+	width: 0px;
+	height: 0px;
+	margin-left: 8px;
+}
+
+i, button {
+	display: inline-block;
 }
 
 @font-face {
@@ -738,6 +778,7 @@ table {
 .glyphicon-tree-deciduous:before {
   content: "\e200";
 }
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
